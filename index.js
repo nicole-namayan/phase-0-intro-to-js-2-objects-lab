@@ -1,1 +1,3 @@
-// Write your solution in this file!
+const employee = {
+    "marie""p.o box 34261,nairobi"
+}
