@@ -1,12 +1,33 @@
-const cards =["Ada", "Brendan","Ali"];
-
-function writeCards(cards) {
-for (let i = 0; i < cards.length; i++) {
-    console.log(`Thank you ${cards[i]} for the wonderful birthday gift!`);
-    debugger;
-    }
-
+function updateEmployeeWithKeyAndValue(employee, key, value) {
+  return {
+    ...employee,
+    [key]: value,
+  };
 }
-writeCards(cards);
+const employee = {
+  name: 'nicole namayan',
+  age: 20,
+  jobTitle: 'Software Engineer',
+};
 
+const updatedEmployee = updateEmployeeWithKeyAndValue(employee, 'age', 21);
+
+console.log(updatedEmployee)
+
+
+function destructivelyUpdateEmployeeWithKeyAndValue(employee, key, value) {
+  employee[key] = value;
+  return employee;
+}
+
+function deleteFromEmployeeByKey(employee, key) {
+  const newEmployee = { ...employee };
+  delete newEmployee[key];
+  return newEmployee;
+}
+
+function destructivelyDeleteFromEmployeeByKey(employee, key) {
+  delete employee[key];
+  return employee;
+}
 
